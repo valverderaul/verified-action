@@ -1,0 +1,12 @@
+name: "Verify"
+
+description: "Verify action using BeautifulSoup"
+
+inputs:
+  urlaction:
+    description: "URL of the action"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
