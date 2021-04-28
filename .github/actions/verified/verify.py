@@ -1,7 +1,7 @@
 import requests, os
 from bs4 import BeautifulSoup
 
-print(os.system('ls'))
+print(os.system('ls /github/workspace'))
 print(os.system('pwd'))
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
