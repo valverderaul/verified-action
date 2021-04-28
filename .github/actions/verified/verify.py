@@ -1,7 +1,7 @@
 import requests, os
 from bs4 import BeautifulSoup
 
-print(os.system('cd /github/workspace/0'))
+print(os.system('cd .github'))
 print("========================")
 print(os.system('pwd'))
 print("========================")
