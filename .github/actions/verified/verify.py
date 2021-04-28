@@ -8,7 +8,7 @@ repos  = []
 for line in lines:
     if line.strip().startswith("- uses:") or line.strip().startswith("uses:"):
         if not line.split(":")[1].strip().startswith("."):
-            repos.append(line.split(":")[1].split("@")[0])
+            repos.append(line.split(":")[1].split("@")[0].strip())
 
 print(repos)
 
