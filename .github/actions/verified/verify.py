@@ -5,7 +5,7 @@ workflow_file = open('.github/workflows/main.yml', 'r')
 lines = workflow_file.readlines()
 
 for line in lines:
-    if line.strip().startswith("- uses:"):
+    if line.strip().startswith("- uses:") or line.strip().startswith("uses:"):
         print("HOLA" + line)
 
 
