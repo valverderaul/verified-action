@@ -5,9 +5,7 @@ workflow_file = open('.github/workflows/main.yml', 'r')
 lines = workflow_file.readlines()
 
 for line in lines:
-    if line.startswith("- uses:"):
-        print("======")
-        print(line)
+    print(line)
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
 soup = BeautifulSoup(req.text, features="html.parser")
