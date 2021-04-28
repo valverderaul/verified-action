@@ -5,8 +5,10 @@ workflow_file = open('.github/workflows/main.yml', 'r')
 lines = workflow_file.readlines()
 
 for line in lines:
+    print(line)
+    print(line.replace("\t", ""))
     if line.replace("\t", "").startswith("- uses:"):
-        print(line)
+        print("HOLA" + line)
 
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
