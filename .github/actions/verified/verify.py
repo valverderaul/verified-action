@@ -1,11 +1,7 @@
 import requests, os
 from bs4 import BeautifulSoup
 
-print(os.system('cd .github'))
-print("========================")
-print(os.system('pwd'))
-print("========================")
-print(os.system('ls'))
+print(os.system('cat .github/workflows/main.yml'))
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
 soup = BeautifulSoup(req.text, features="html.parser")
