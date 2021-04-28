@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 workflow_file = open('.github/workflows/main.yml', 'r')
 lines = workflow_file.readlines()
 
-repos  = []
 for line in lines:
     if line.strip().startswith("- uses:") or line.strip().startswith("uses:"): # Cogemos todas las acciones del workflow, quitamos tabs
         if not line.split(":")[1].strip().startswith("."): # Descartamos nuestras propias actions
