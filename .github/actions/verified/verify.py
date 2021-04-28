@@ -10,7 +10,7 @@ for line in lines:
         if not line.split(":")[1].strip().startswith("."):
             req = requests.get("https://github.com/" + line.split(":")[1].split("@")[0].strip())
             soup = BeautifulSoup(req.text, features="html.parser")
-            print(soup.find_all("a", string="View on Marketplace"))
+            print(soup.find("a", string="View on Marketplace")['href'])
 
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
