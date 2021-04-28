@@ -7,9 +7,10 @@ lines = workflow_file.readlines()
 repos  = []
 for line in lines:
     if line.strip().startswith("- uses:") or line.strip().startswith("uses:"):
-        if line.split(":")[1].strip().startswith("action"):
-            print(line)
-            print(line.split(":")[1])
+        if not line.split(":")[1].strip().startswith("."):
+            repos.append(line.split(":")[1].split("@")[0])
+
+print(repos)
 
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
