@@ -6,7 +6,7 @@ lines = workflow_file.readlines()
 
 for line in lines:
     print(line)
-    print(line.replace("\t", ""))
+    print(line.replace("\t", "tab"))
     if line.replace("\t", "").startswith("- uses:"):
         print("HOLA" + line)
 
