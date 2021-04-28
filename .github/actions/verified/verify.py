@@ -6,6 +6,7 @@ lines = workflow_file.readlines()
 
 for line in lines:
     print(line)
+    print("====")
 
 req = requests.get(os.getenv('INPUT_URLACTION'))
 soup = BeautifulSoup(req.text, features="html.parser")
