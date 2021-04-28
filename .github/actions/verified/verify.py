@@ -17,5 +17,5 @@ for line in lines:
             soup = BeautifulSoup(req_to_action.text, features="html.parser")
             verify = soup.find_all("svg", {"class": "octicon octicon-verified text-blue-light"})
             
-            if not len(verify):
-                print("La acción: " + action + " no está verificada.")
+            if len(verify):
+                print("La acción: " + action + " está verificada.")
